@@ -25,21 +25,28 @@ a {
 .btn {
     min-width: 173px;
     height: 57px;
-    color:#FFF;
+    color: #fff;
     text-align: center;
     font-family: "Public Sans";
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.55; /* 155.556% */
     border-radius: 40px;
-    border: 1.5px solid #143C3C;
-    background: #143C3C;
+    border: 1.5px solid #143c3c;
+    background: #143c3c;
 }
 
 .btn:hover {
     opacity: 0.9;
     cursor: pointer;
-    color: #DDDCDC;
+    color: #dddcdc;
+}
+
+.section-heading {
+    color: #152427;
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1.238; /* 123.81% */
 }
 
 /* ================ HEADER ================= */
@@ -48,7 +55,7 @@ a {
     position: sticky;
     top: -16px;
     z-index: 3;
-    background: #FFF;
+    background: #fff;
 }
 
 .header__navigation {
@@ -68,7 +75,12 @@ a {
     width: 100%;
     height: 1px;
     flex-shrink: 0;
-    background: linear-gradient(90deg, #FFF 0%, #DDDCDC 51.09%, rgba(212, 212, 212, 0.00) 99.68%);
+    background: linear-gradient(
+        90deg,
+        #fff 0%,
+        #dddcdc 51.09%,
+        rgba(212, 212, 212, 0) 99.68%
+    );
     bottom: -13px;
 }
 
@@ -84,7 +96,7 @@ a {
 
 .headering__nav--action {
     font-family: "Public Sans";
-    color: #7D8188;
+    color: #7d8188;
     padding: 0 19px;
     font-size: 1.8rem;
     font-weight: 500;
@@ -106,13 +118,14 @@ a {
     position: absolute;
     width: 12px;
     height: 2px;
-    background: #143C3C;
+    background: #143c3c;
     bottom: -27.5px;
     left: 19px;
     z-index: 1;
 }
 
-/* HERO */
+/* ================ HERO ================= */
+
 .hero {
     margin-top: 116px;
     padding-bottom: 87px;
@@ -148,7 +161,7 @@ a {
     height: 364px;
     position: absolute;
     left: 504px;
-    top: 249px
+    top: 249px;
 }
 
 .hero__sink {
@@ -164,7 +177,7 @@ a {
 
 .hero__header--header {
     width: 368px;
-    color:#152427;
+    color: #152427;
     font-family: "Public Sans";
     font-size: 5rem;
     font-weight: 800;
@@ -173,7 +186,7 @@ a {
 
 .hero__header--desc {
     margin-top: 20px;
-    color: #575D5E;
+    color: #575d5e;
     font-family: "Public Sans";
     font-size: 1.8rem;
     font-weight: 500;
@@ -205,13 +218,29 @@ a {
 }
 
 .hero__image {
+    position: relative;
+}
+
+.hero__image--bg-img {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 340px;
+    height: 340px;
+    flex-shrink: 0;
+    border-radius: 340px;
+    background: #4DBB9A;
+    filter: blur(137px);
+}
+
+.hero__image--thumb {
     display: flex;
     gap: 20px;
     flex-shrink: 0;
-    /* margin-left: -23px; */
 }
 
 .hero__thumb {
+    /* display: inline-block; */
     width: 202px;
     height: 466px;
     flex-shrink: 0;
@@ -221,9 +250,187 @@ a {
 
 .hero__thumb:nth-child(2) {
     margin-top: 77px;
-    box-shadow:0px 0px 137px 5px #4DBB9A;
 }
 
-.hero__thumb:first-child {
-    z-index: 1;
+/* ================ LOGO ================= */
+.logo {
+    margin-top: 42px;
+}
+
+.logo__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 201px;
+    flex-shrink: 0;
+    background: #e2eddf;
+    border: 1px solid #e2eddf;
+    border-radius: 100.5px;
+}
+
+.logo__section--google {
+    color: #143c3c;
+    font-size: 3.1rem;
+    font-weight: 500;
+}
+
+.logo__section--slack {
+    display: flex;
+    align-items: center;
+    margin-left: 47px;
+    color: #143c3c;
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.image__slack {
+    display: block;
+    margin-right: 3px;
+}
+
+.logo__section--agworld {
+    display: flex;
+    align-items: center;
+    margin-left: 51px;
+    color: #163c35;
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+.image__agworld {
+    display: block;
+    margin-right: 11px;
+}
+
+.logo__section--riotinto {
+    margin-left: 63px;
+    font-family: "Sonsie One", sans-serif;
+    color: #143c3c;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+.logo__section--heroku {
+    display: flex;
+    align-items: center;
+    margin-left: 63px;
+    color: #143c3c;
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 1.995px;
+    text-transform: uppercase;
+}
+
+.image__heroku {
+    display: block;
+    margin-right: 10px;
+}
+
+/* ================ SERVICE ================= */
+.service {
+    margin-top: 106px;
+}
+
+.service__header--title {
+    position: relative;
+    margin-left: 46px;
+    color: #152427;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.625; /* 162.5% */
+}
+
+.service__header--title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 12px;
+    width: 25px;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.service__header--descript {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service__header--header {
+    margin-top: 12px;
+    width: 520px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.service__header--header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 66px;
+    height: 2px;
+    background: currentColor;
+    bottom: 19px;
+    right: 103px;
+}
+
+.service__header--arrow {
+    display: flex;
+    gap: 17px;
+}
+
+.service__header--arrow svg:last-child {
+    rotate: 180deg;
+}
+
+.service__arrow {
+    border-radius: 50%;
+    background: #E2EDDF;
+    color: #152427;
+}
+
+.service__arrow:hover {
+    background: #143C3C;
+    color: #fff;
+    cursor: pointer;
+}
+
+.service__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 76px;
+}
+
+.service__item--img {
+    display: block;
+    width: 370px;
+    height: 318px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.service__item--infor {
+    padding: 24px 0;
+}
+
+.service__title {
+    color: #152427;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+
+.service__desc {
+    margin-top: 18px;
+    width: 268px;
+    color: #7D8188;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.714; /* 171.429% */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
