@@ -985,6 +985,7 @@ a {
 }
 
 .blog__infor--item:hover {
+    border-radius: 40px;
     box-shadow: 0px 12px 74px 0px rgba(91, 91, 91, 0.25);
 }
 
