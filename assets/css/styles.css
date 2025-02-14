@@ -567,14 +567,15 @@ a {
 
 .about__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 14px);
+    grid-template-columns: 33px 1fr;
+    grid-template-rows: 11px 14px;
     row-gap: 5px;
-    column-gap: 5px;
+    column-gap: 23px;
     margin-top: 20px;
 }
 
 .about__team {
+    margin-left: -6px;
     color: #152427;
     font-family: "Public Sans";
     font-size: 1rem;
@@ -597,8 +598,8 @@ a {
 }
 
 .about__avatar {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     margin-left: -6px;
     border-radius: 50%;
     object-fit: cover;
