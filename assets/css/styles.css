@@ -43,10 +43,23 @@ a {
 }
 
 .section-heading {
+    width: 520px;
     color: #152427;
+    position: relative;
     font-size: 4.2rem;
     font-weight: 600;
     line-height: 1.238; /* 123.81% */
+}
+
+.section-heading::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 66px;
+    height: 2px;
+    background: #143c3c;
+    bottom: 19px;
+    right: 103px;
 }
 
 .section-title {
@@ -55,6 +68,7 @@ a {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.125; /* 112.5% */
+    position: relative;
 }
 
 .section-title::before {
@@ -373,18 +387,7 @@ a {
     margin-top: 12px;
     width: 520px;
     flex-shrink: 0;
-    position: relative;
-}
-
-.service__header--header::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 66px;
-    height: 2px;
-    background: currentColor;
-    bottom: 19px;
-    right: 103px;
+    /* position: relative; */
 }
 
 .service__header--arrow {
@@ -659,4 +662,175 @@ a {
 
 .about__quantity--descipt:last-child {
     margin-top: 58px;
+}
+
+/* ================ PROCESS ================= */
+.process {
+    margin-top: 105px;
+}
+
+.process__infor--header {
+    width: 477px;
+}
+
+.process__infor--header.section-heading::after {
+    bottom: 18px;
+    right: -9px;
+}
+
+.process__body {
+    margin-top: 81px;
+}
+
+.process__body--item {
+    display: flex;
+    gap: 175px;
+    position: relative;
+    padding: 46px 41px 21px 30px;
+    border-radius: 33px;
+    border-bottom: 3px solid #83A17D;
+}
+
+.process__body--item:first-child {
+    padding: 57px 41px 76px 30px;
+}
+
+.process__body--item:hover {
+    border-bottom: 3px solid transparent;
+    background: #E2EDDF;
+}
+
+.process__body--title {
+    display: inline-flex;
+    /* align-items: center; */
+    gap: 64px;
+}
+
+.process__body--item .number {
+    width: 109px;
+    color: #143C3C;
+    font-size: 7.2rem;
+    font-weight: 600;
+    line-height: 0.7222; /* 72.222% */
+}
+
+.process_title {
+    width: 176px;
+}
+
+.process__title--header {
+    margin-top: 10px;
+    color: #152427;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+    position: relative;
+}
+
+.process__title--learn-more {
+    position: absolute;
+    color: #575D5E;
+    bottom: 54px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+    text-decoration: underline;
+}
+
+.process__title--header.first-child::after:hover {
+    cursor: pointer;
+}
+
+.process__body-img {
+    position: absolute;
+    right: 51px;
+    bottom: 0;
+    
+}
+
+.process__body--desc {
+    color: #7D8188;
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.55556; /* 155.556% */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ================ PROJECT ================= */
+.project {
+    margin-top: 148px;
+    background: #143C3C;
+}
+
+.project__header {
+    display: block;
+    padding: 116px 0 62px;
+}
+
+.project__infor {
+    display: grid;
+    grid-template-columns: 457px 590px;
+    column-gap: 93px;
+}
+
+.project__infor--header.section-heading::after {
+    right: 97px;
+    background: #83A17D;
+}
+
+.project__descript,
+.project__text {
+    color: #6A8383;
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5556; /* 155.556% */
+}
+
+.project__descript {
+    padding-top: 11px;
+}
+
+.project__text {
+    margin-right: 26px;
+    color: #fff;
+}
+
+.project__btn {
+    display: inline-block;
+    margin-top: 13px;
+}
+
+.project__body {
+    margin-top: 65px;
+    position: relative;
+}
+
+.project__body--img {
+    width: 100%;
+    height: 544px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+.project__body--playbg {
+    position: absolute;
+    left: 511px;
+    top: 213px;
+    padding: 59px;
+    background: #000;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.project__body--play {
+    position: absolute;
+    left: 511px;
+    top: 213px;
+    opacity: 0.7;
+    z-index: 3;
 }
